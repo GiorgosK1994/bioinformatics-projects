@@ -1,18 +1,14 @@
-# bioinformatics-projects
-My first bioinformatics project in Python
-DNA GC Content Calculator
+seq = input("Write a DNA sequence using only nucleotides(A,T,G,C): ").upper()
+nucleotides = {"A", "T", "G", "C"}
+def seq_validation(sequence):
+    return all(nuc in nucleotides for nuc in sequence )
 
-A Python program that calculates the GC content of a DNA sequence, ensuring only valid nucleotides (A, T, G, C) are used.
-Usage
+while not seq_validation(seq):
+    print("Choose only from the existing nucleotides (A, T, G, C). Try again.")
+    seq = input("Write a DNA sequence using only nucleotides (A, T, G, C): ").upper()
 
-Run the program.
-Input a DNA sequence (e.g., "ATGC").
-The program calculates and shows the GC content.
 
-Example:
-Write a DNA sequence using only nucleotides (A, T, G, C): ATGC
-GC content of ATGC is 50.0%
-
-Requirements
-
-    Python 3.x
+def calculate_gc_content(sequence):
+    gc_content = (sequence.count("G") + sequence.count("C") )/ len(sequence) * 100
+    return f"GC content of {sequence} is {round(gc_content, 2)}%"
+print(calculate_gc_content(seq))
