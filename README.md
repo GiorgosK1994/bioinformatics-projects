@@ -1,14 +1,17 @@
-seq = input("Write a DNA sequence using only nucleotides(A,T,G,C): ").upper()
-nucleotides = {"A", "T", "G", "C"}
-def seq_validation(sequence):
-    return all(nuc in nucleotides for nuc in sequence )
+DNA GC Content Calculator
 
-while not seq_validation(seq):
-    print("Choose only from the existing nucleotides (A, T, G, C). Try again.")
-    seq = input("Write a DNA sequence using only nucleotides (A, T, G, C): ").upper()
+A Python program that calculates the GC content of a DNA sequence, ensuring only valid nucleotides (A, T, G, C) are used.
+Usage
 
+Run the program.
+Input a DNA sequence (e.g., "ATGC").
+The program calculates and shows the GC content.
 
-def calculate_gc_content(sequence):
-    gc_content = (sequence.count("G") + sequence.count("C") )/ len(sequence) * 100
-    return f"GC content of {sequence} is {round(gc_content, 2)}%"
-print(calculate_gc_content(seq))
+Example:
+
+Write a DNA sequence using only nucleotides (A, T, G, C): ATGC
+GC content of ATGC is 50.0%
+
+Requirements
+
+    Python 3.x
