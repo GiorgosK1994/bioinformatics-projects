@@ -1,17 +1,7 @@
-DNA GC Content Calculator
+Bioinformatics Scripts: GC Content & Pairwise Alignment
 
-A Python program that calculates the GC content of a DNA sequence, ensuring only valid nucleotides (A, T, G, C) are used.
-Usage
+This repository contains two fundamental bioinformatics scripts:
 
-Run the program.
-Input a DNA sequence (e.g., "ATGC").
-The program calculates and shows the GC content.
-
-Example:
-
-Write a DNA sequence using only nucleotides (A, T, G, C): ATGC
-GC content of ATGC is 50.0%
-
-Requirements
-
-    Python 3.x
+GC Content Calculator – Computes the GC content of a given DNA sequence.
+Pairwise Sequence Alignment – Performs global sequence alignment using the Needleman-Wunsch algorithm from Biopython’s pairwise2 module.
+Python 3.x
